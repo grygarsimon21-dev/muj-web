@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Můj první web</title>
+ <style>
+    /* ---- Globální nastavení ---- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #e6f2e6; /* světle zelená */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* ---- Header ---- */
+h1, h2 {
+    text-align: center;
+    color: #2d6a4f;
+}
+
+h1 {
+    margin-top: 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+/* ---- Menu ---- */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 10px 0;
+    background-color: #95d5b2;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #1b4332;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #74c69d;
+    color: white;
+}
+
+/* ---- Submenu "O mně" ---- */
+#submenu-about {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px auto;
+}
+
+#submenu-about .column {
+    flex: 1;
+    border: 2px solid #52b788;
+    background-color: #d8f3dc;
+    padding: 15px;
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+#submenu-about .column:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* ---- Hobby a Topics sekce ---- */
+.hobby-columns, .topic-columns {
+    display: flex;
+    gap: 20px;
+    margin: 20px auto;
+    justify-content: center;
+}
+
+.hobby-columns .column, .topic-columns .topic-column {
+    flex: 1;
+    border: 2px solid #52b788;
+    padding: 15px;
+    background-color: #d8f3dc;
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.hobby-columns .column:hover, .topic-columns .topic-column:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* ---- Tlačítka ---- */
+button.expand-btn {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #40916c;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    transition: background 0.3s;
+}
+
+button.expand-btn:hover {
+    background-color: #1b4332;
+}
+
+/* ---- Extra obsah ---- */
+.extra-content p {
+    margin-top: 10px;
+}
+
+/* ---- Ostatní sekce ---- */
+#about-section, #topics-section {
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f0fdf4;
+    border-radius: 8px;
+    max-width: 1000px;
+}
+
+.header-line {
+    width: 80px;         /* délka čáry */
+    height: 50px;        /* tloušťka čáry */
+    background-color: #40916c; /* tmavě zelená / modrozelená */
+    margin: 10px auto 30px auto; /* odsazení nahoře a dole */
+    border-radius: 3px;   /* mírně zaoblené rohy */
+}
+
+
+ </style>
+
+</head>
+
+<body>
+    <h1>Můj první web lol</h1>
+    <h2>Můj web xd</h2>
+    <div class="header-line"></div>
+
+    <!-- Menu -->
+    <nav>
+        <ul>
+            <li><a href="#" id="menu-about">O mně</a></li>
+            <li><a href="#hobby-section" id="menu-hobby">Moje koníčky</a></li>
+            <li><a href="#topics-section" id="menu-topics">Témata</a></li>
+        </ul>
+    </nav>
+
+    <!-- Submenu O mně -->
+    <div id="submenu-about">
+        <div class="column">
+            <h3>Nadpis 1</h3>
+            <p>Text 1, který napíšu</p>
+        </div>
+        <div class="column">
+            <h3>Nadpis 2</h3>
+            <p>Text 2, který napíšu</p>
+        </div>
+        <div class="column">
+            <h3>Nadpis 3</h3>
+            <p>Text 3, který napíšu jenom já</p>
+        </div>
+    </div>
+
+    <!-- Hobby section -->
+    <div id="hobby-section">
+        <h2>Moje koníčky</h2>
+        <div class="hobby-columns">
+            <div class="column">
+                <h3>Sport</h3>
+                <p>Sem napiš svůj text o sportu.</p>
+                <button class="expand-btn">Více...</button>
+                <div class="extra-content">
+                    <p>Další informace o sportu, které se zobrazí po kliknutí.</p>
+                </div>
+            </div>
+            <div class="column">
+                <h3>Hudba</h3>
+                <p>Sem napiš svůj text o hudbě.</p>
+                <button class="expand-btn">Více...</button>
+                <div class="extra-content">
+                    <p>Další informace o hudbě, které se zobrazí po kliknutí.</p>
+                </div>
+            </div>
+            <div class="column">
+                <h3>Hry</h3>
+                <p>Sem napiš svůj text o hrách.</p>
+                <button class="expand-btn">Více...</button>
+                <div class="extra-content">
+                    <p>Další informace o hrách, které se zobrazí po kliknutí.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About section -->
+    <div id="about-section">
+        <h2>O mně</h2>
+        <p>Tady můžeš napsat krátký text o sobě.</p>
+        <button class="expand-btn">Více...</button>
+        <div class="extra-content">
+            <p>Zde můžeš napsat delší příběh o sobě, svých zájmech, škole, koníčcích atd.</p>
+        </div>
+    </div>
+
+    <!-- Topics section -->
+    <div id="topics-section">
+        <h2>Témata</h2>
+        <div class="topic-columns">
+            <div class="topic-column">
+                <h3>Škola</h3>
+                <p>Tady napíšu krátký text o škole</p>
+                <button class="expand-btn">Více...</button>
+                <div class="extra-content">
+                    <p>Delší text o škole, učitelích, předmětech atd.</p>
+                </div>
+            </div>
+            <div class="topic-column">
+                <h3>Technologie</h3>
+                <p>Krátký text o technologiích.</p>
+                <button class="expand-btn">Více...</button>
+                <div class="extra-content">
+                    <p>Delší text o počítačích, webu, programování.</p>
+                </div>
+            </div>
+            <div class="topic-column">
+                <h3>Filmy</h3>
+                <p>Krátký text o filmech.</p>
+                <button class="expand-btn">Více...</button>
+                <div class="extra-content">
+                    <p>Delší text o oblíbených filmech, žánrech, režisérech.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Skripty -->
+    <script>
+        // Menu toggle
+        const menuAbout = document.getElementById('menu-about');
+        const submenuAbout = document.getElementById('submenu-about');
+        menuAbout.addEventListener('click', () => {
+            submenuAbout.style.display = submenuAbout.style.display === 'none' ? 'flex' : 'none';
+        });
+
+        // Expand buttons
+        const buttons = document.querySelectorAll('.expand-btn');
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const extra = btn.nextElementSibling;
+                if (extra.style.display === 'block') {
+                    extra.style.display = 'none';
+                    btn.textContent = 'Více...';
+                } else {
+                    extra.style.display = 'block';
+                    btn.textContent = 'Méně...';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
